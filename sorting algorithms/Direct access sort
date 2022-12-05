@@ -1,0 +1,16 @@
+def direct_access_sort (A):
+    "Sort A assuming items have distinct non-negative keys"
+    u = max(A)+1    # O(n) find maximum key
+    D = [None] * u                      # O(u) direct access array
+    for i in A:
+        D[i]=i
+    ind=0
+    for i in D:
+        if(i!=None):
+            A[ind]=i
+            ind+=1
+a=[33,4,5,1,8,2]
+direct_access_sort(a)
+print(a)
+
+time complexity : linear time
